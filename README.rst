@@ -64,24 +64,24 @@ Vertical Scaling
 If you are paying for dotCloud, you can scale vertically (=add more RAM)
 to your service, with the following dotCloud command::
 
-  dotcloud scale hg2g elasticsearch:memory=1G
+    dotcloud scale hg2g elasticsearch:memory=1G
 
 You must then update the ElasticSearch heap size, by setting the following
-runtime variable:
+runtime variable::
 
-  dotcloud var set hg2g ELASTICSEARCH_HEAPSIZE=800m
+    dotcloud var set hg2g ELASTICSEARCH_HEAPSIZE=800m
 
 Depending on the size of your data set and your access pattern, it could
 be wise to use between 50% and 90% of your dotCloud memory reservation for
 ElasticSearch heap size.
 
 Installing the plugin head
----------------
+--------------------------
 
 Head is a web front end for an ElasticSearch cluster.
-Here is how to add it to your elasticsearch install
+Here is how to add it to your elasticsearch install::
 
-  dotcloud run elasticsearch
-  cd elasticsearch/
-  bin/plugin -install Aconex/elasticsearch-head
-  supervisorctl restart elasticsearch
+    dotcloud run elasticsearch
+    cd elasticsearch/
+    bin/plugin -install Aconex/elasticsearch-head
+    supervisorctl restart elasticsearch
