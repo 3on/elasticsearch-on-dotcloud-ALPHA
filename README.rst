@@ -74,3 +74,14 @@ runtime variable:
 Depending on the size of your data set and your access pattern, it could
 be wise to use between 50% and 90% of your dotCloud memory reservation for
 ElasticSearch heap size.
+
+Installing the plugin head
+---------------
+
+Head is a web front end for an ElasticSearch cluster.
+Here is how to add it to your elasticsearch install
+
+  dotcloud run elasticsearch
+  cd elasticsearch/
+  bin/plugin -install Aconex/elasticsearch-head
+  supervisorctl restart elasticsearch
